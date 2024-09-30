@@ -1,9 +1,3 @@
-为了完成你的Java Web作业，我们将依次探讨以下几个方面：
-
-1. 会话安全性
-2. 分布式会话管理
-3. 会话状态的序列化和反序列化
-
 ### 1. 会话安全性
 
 #### 会话劫持和防御
@@ -18,7 +12,7 @@
 
 #### 跨站脚本攻击（XSS）和防御
 
-**跨站脚本攻击（XSS）**是一种攻击方式，攻击者试图将恶意脚本注入到用户浏览的网页中，从而窃取用户信息或执行恶意操作。防御措施包括：
+跨站脚本攻击（XSS）是一种攻击方式，攻击者试图将恶意脚本注入到用户浏览的网页中，从而窃取用户信息或执行恶意操作。防御措施包括：
 
 - **输入验证**：对用户提交的所有数据进行严格的验证和过滤。
 - **输出编码**：对动态生成的HTML内容进行适当的转义处理，防止执行JavaScript代码。
@@ -27,7 +21,7 @@
 
 #### 跨站请求伪造（CSRF）和防御
 
-**跨站请求伪造（CSRF）**是一种攻击方式，攻击者通过伪装合法用户的请求来执行非授权操作。防御措施包括：
+跨站请求伪造（CSRF）是一种攻击方式，攻击者通过伪装合法用户的请求来执行非授权操作。防御措施包括：
 
 - **CSRF Token**：在表单中加入一个隐藏字段，包含一个唯一Token，并在服务器端验证。
 - **Referer 检查**：检查HTTP请求头部的Referer字段，确认请求来自预期的网站。
@@ -93,7 +87,7 @@ public class User implements Serializable {
     // Getters and Setters
 }
 
-// 序列化示例
+// 序列化
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
@@ -106,7 +100,7 @@ public class SerializeExample {
     }
 }
 
-// 反序列化示例
+// 反序列化
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
@@ -156,4 +150,3 @@ public class CustomSerializableUser implements Serializable {
 }
 ```
 
-以上内容涵盖了作业的主要要求，希望对你有所帮助。如果有具体的技术问题或需要进一步的解释，请随时提问。
